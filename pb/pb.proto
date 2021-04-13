@@ -1,0 +1,16 @@
+syntax="proto3";
+
+option go_package="gokit/test/pb";
+
+service TestService {
+    rpc Validate(Input) returns (Output);
+    rpc Fix(Input) returns (Output);
+}
+
+message Input {
+    string str = 1;
+}
+
+message Output {
+    string str = 1;
+}
